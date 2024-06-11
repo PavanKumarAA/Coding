@@ -1,0 +1,25 @@
+#include <stdio.h>
+void main ()
+{
+  int n, b, i, c = 0;
+  int a[n];
+  printf ("Enter the no of inputs\n");
+  scanf ("%d", &n);
+  printf ("Enter the values of a \n");
+  for (i = 0; i < n; i++)
+    scanf ("%d", &a[i]);
+  printf ("Enter the no to be searched\n");
+  scanf ("%d", &b);
+  for (int i = 0; i < n; i++)
+    {
+      if (a[i] == b)
+	{
+	  c++;
+	  break;
+	}
+    }
+      if (c == 1)
+	printf ("Yes having");
+      else
+	printf ("Not having");
+}
