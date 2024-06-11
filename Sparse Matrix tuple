@@ -1,0 +1,33 @@
+#include <stdio.h>
+typedef struct
+{
+ int row,col,val;
+}nzterms;
+ 
+ void main()
+ {
+    nzterm a[10],b[10];
+    int i,j,k,n;
+    printf("Enter the no non zero terms \n");
+    scanf("%d",&n);
+    printf("Read the Sparse matrix elements \n");
+    for(i=0,i<n;i++)
+    {
+     scanf("%d %d %d",&a[i].row,&a[i].col,&a[i].val);
+     b[0].row=a[0].row;
+     b[0].col=a[0].col;
+     b[0].col=a[0].val;
+    }
+    for(i=0;i<a[0].col;i++
+    {
+      for(j=1;j<n;j++)
+      {
+        if(a[j].col==i)
+        {
+          b[k].row=a[j].col;
+          b[k].col=a[j].row;
+          b[k].val=a[k].val;
+        }
+      }
+    }
+ }
