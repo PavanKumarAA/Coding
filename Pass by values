@@ -1,0 +1,14 @@
+#include <stdio.h>
+int cube (int);
+int main(void)
+ {
+  int number=6;
+  printf("The original value of number is %d\n",number);
+  printf("After returning from function %d\n",cube(number));
+  number=cube(number);
+  printf("After calling function %d\n",number);
+ }
+ int cube(int n)
+ {
+   return n*n*n;
+ }
