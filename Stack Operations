@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+int top = -1;
+int s[5];
+int stackoverflow()
+{
+  if(top == s-1)
+  exit(0);
+  else
+  return 0;
+}
+int stackunderflow()
+{
+    if(top==-1)
+    exit(0);
+    else 
+    return 0;
+}
+void push()
+{
+    int e;
+    if(stackoverflow())
+    {
+    printf("Stack is overflowing");
+    exit(0);
+    }
+    printf("Enter the elemenet to be pushed \n");
+    scanf("%d",&e);
+    top=top+1;
+    s[top]=e;
+}
+void pop()
+{
+    int e;
+    if(stackunderflow())
+    {
+    printf("Stack is underflowing");
+    exit(0);
+    }
+    else
+    {
+    e=s[top];
+    top--;
+    printf("Deleted element is %d",e);
+   }
+}
+void display()
+{
+    int i;
+    if(stackunderflow())
+   {
+    printf("Stack is empty");
+    exit(0);
+   }
+    printf("The stack elements are \n");
+    for(i=0;i<=top;i++)
+    printf("\n%d\n",s[i]);
+}
+void main()
+{
+    int ch;
+    printf("Stack Operations \n");
+    do
+    {
+    printf("\n1.Push\n2.Pop\n3.Display\n4.Exit\n");
+    printf("Enter your choice\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+        case 1: push();
+               break;
+        case 2: pop();
+               break;
+        case 3: display();
+               break;
+        case 4: exit(0);
+        default : printf("Invalid Choice\n");
+    }
+    }while(ch!=4);
+    exit(0);
+}
